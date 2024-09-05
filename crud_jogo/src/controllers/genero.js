@@ -1,4 +1,4 @@
-const model = require("../models/genero.js");
+const model = require("../models/genero.js"); 
 
 const db = []
 

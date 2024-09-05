@@ -1,4 +1,4 @@
-const model = require("../models/estudio.js");
+const model = require("../models/estudio.js"); 
 
 const db = []
 
