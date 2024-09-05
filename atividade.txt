@@ -1,0 +1,30 @@
+Utilizando tanto o router do express quanto os models separados dos controllers. Crie o CRUD das seguintes entidades:
+
+Jogo: 
+ - nome
+ - genero_id (pode ter mais de um)
+ - estudio_id
+ - publicadora_id
+ - lancado_em
+ - criado_em
+ - atualizado_em
+
+Genero:
+ - nome
+ - criado_em
+ - atualizado_em
+
+Estúdio:
+ - nome
+ - criado_em
+ - atualizado_em
+
+Publicadora:
+ - nome
+ - criado_em
+ - atualizado_em
+
+Adicionar campo de criado_em e atualizado_em dentro dos Models de cada entidade, esses campos devem ser gerados a partir da classe Date do javascript.
+
+Na criação tanto o campo de criado_em e atualizado_em devem ser definidos, em atualizações posteriores somente o de atualizado_em.
+Em todas as entidades utilizar middleware que transforma nome em caixa alta
