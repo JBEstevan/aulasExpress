@@ -2,6 +2,15 @@ const model = require("../models/estudio.js");
 
 const db = []
 
+const hora = () => {
+    const now = new Date();
+
+    const data_sem_hora = new Date(now).toISOString().split("T")[0];
+
+    return data_sem_hora
+}
+
+
 const index = () => db
 
 const show = id => db.find(el => el.id == id)
@@ -41,5 +50,6 @@ module.exports = {
     show,
     store,
     update,
-    destroy
+    destroy,
+    hora
 }
