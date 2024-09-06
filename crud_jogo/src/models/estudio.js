@@ -1,19 +1,15 @@
 let proxId = 1;
 
-const model = (body, id = proxId++) => {
+const model = (body, id = proxId++, date) => {
+    const now = new Date();
     if(
-        body.nome != undefined &&
-        body.criado_em != undefined &&
-        body.atualizado_em != undefined &&
-        body.nome != "" &&
-        body.criado_em != "" &&
-        body.atualizado_em != ""
+        body.nome != undefined 
     ) {
         return {
             id,
             nome: body.nome,
-            atualizado_em: body.atualizado_em,
-            criado_em: body.criado_em
+            atualizado_em: date != undefined ? date : now,
+            criado_em: now
         }
     }
 }

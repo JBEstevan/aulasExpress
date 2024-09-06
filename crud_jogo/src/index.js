@@ -1,8 +1,8 @@
 const express = require("express");
-const jogo = require("./routes/jogo.js")
-const genero = require("./routes/genero.js")
-const estudio = require("./routes/estudio.js")
-const publicadora = require("./routes/publicadora.js")
+const jogo_router = require("./routes/jogo.js")
+const genero_router = require("./routes/genero.js")
+const estudio_router = require("./routes/estudio.js")
+const publicadora_router = require("./routes/publicadora.js")
 
 const app = express();
 const port= 5000;

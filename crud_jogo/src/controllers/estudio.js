@@ -2,20 +2,12 @@ const model = require("../models/estudio.js");
 
 const db = []
 
-const hora = () => {
-    const now = new Date();
-
-    const data_sem_hora = new Date(now).toISOString().split("T")[0];
-
-    return data_sem_hora
-}
-
-
 const index = () => db
 
 const show = id => db.find(el => el.id == id)
 
 const store = (body) => {
+    console.log(body)
     const novo = model(body)
 
     if (novo) {
@@ -27,8 +19,9 @@ const store = (body) => {
 }
 
 const update = (body, id) => {
-    const novo = model(body, parseInt(id))
     const indice = db.findIndex(el => el.id == id)
+    const data_estudio = db.find(el => el.id == id)
+    const novo = model(body, parseInt(id), data_estudio.criado_em)
 
     if (novo && indice != -1) {
         db[indice] = novo
@@ -50,6 +43,5 @@ module.exports = {
     show,
     store,
     update,
-    destroy,
-    hora
+    destroy
 }
